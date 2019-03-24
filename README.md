@@ -29,3 +29,11 @@ Other (Not best for JavaScript - best for backend)
 * Visual Studio
 * Eclipse
 * Netbeans
+
+
+## Package Management
+* Bower
+* npm
+* JSPM (JavaScript Package Manager)
+* Jam
+* volo
