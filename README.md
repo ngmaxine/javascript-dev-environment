@@ -67,3 +67,19 @@ Sharing Work-In-Progress
     * `npm install -g now`
     *  Create start script
     * `now`
+
+
+## Automation
+* Grunt (configuration over code, writes intermediary files between steps, large plugin ecosystem)
+* Gulp (in-memory streams, fast, code over configuration, large plugin ecosystem)
+* npm Scripts (declared in package.json, leverage OS command line, directly use npm packages, call separate Node scripts, convention-based pre/post hooks, leverage npm)
+    * Use tools directly
+    * No need for separate plugins
+    * Simpler debugging
+    * Better docs
+    * Easy to learn
+    * Simple
+
+Scripts
+* `npm run <scriptName>`
+* Run tasks in parallel: `npm-run-all --parallel <scriptName1> <scriptName2>`
