@@ -20,13 +20,13 @@
 
 
 ## Editors
-Javascript Editors
+### Javascript Editors
 * Atom
 * WebStorm
 * Brackets
 * VSCode
 
-Other (Not best for JavaScript - best for backend)
+### Other (Not best for JavaScript - best for backend)
 * Visual Studio
 * Eclipse
 * Netbeans
@@ -49,7 +49,7 @@ Other (Not best for JavaScript - best for backend)
 * Webpack dev server (built in to Webpack, serves from memory, hot reloading)
 * Browsersync (dedicated IP for sharing work on LAN, all interactions remain in sync, great for cross-device testing, integrates with Webpack/Browserify/Gulp)
 
-Sharing Work-In-Progress
+### Sharing Work-In-Progress
 * localtunnel (share work on local machine, easiest setup, ultra-versatile)
     * `npm install localtunnel -g`
     * Start your app
@@ -80,6 +80,6 @@ Sharing Work-In-Progress
     * Easy to learn
     * Simple
 
-Scripts
+### Scripts
 * `npm run <scriptName>`
 * Run tasks in parallel: `npm-run-all --parallel <scriptName1> <scriptName2>`
