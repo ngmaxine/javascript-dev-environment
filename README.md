@@ -18,6 +18,7 @@
 * Automated Deployment
 * Working example app
 
+
 ## Editors
 Javascript Editors
 * Atom
@@ -37,3 +38,32 @@ Other (Not best for JavaScript - best for backend)
 * JSPM (JavaScript Package Manager)
 * Jam
 * volo
+
+
+## Development Webservers
+* http-server (simple, lightweight, single command serves current directory)
+* live-server (lightweight, live-reloading)
+* Express (comprehensive, highly configurable, production grade)
+    * Alternatives: koa, hapi
+* budo (integrates with Browserify, hot reloading)
+* Webpack dev server (built in to Webpack, serves from memory, hot reloading)
+* Browsersync (dedicated IP for sharing work on LAN, all interactions remain in sync, great for cross-device testing, integrates with Webpack/Browserify/Gulp)
+
+Sharing Work-In-Progress
+* localtunnel (share work on local machine, easiest setup, ultra-versatile)
+    * `npm install localtunnel -g`
+    * Start your app
+    * `lt --port 3000 (--subdomain <name>)`
+* ngrok (share work on local machine, easy setup, secure)
+    * Sign up
+    * Install ngrok
+    * Install authtoken
+    * Start your app
+    * `./ngrok http 80`
+* Surge (hosts only static files, simple, hosting persists, no firewall hole)
+    * `npm install -g surge`
+    * `surge`
+* now (quickly deploy Node.js to cloud, hosting persists, no firewall hole)
+    * `npm install -g now`
+    *  Create start script
+    * `now`
