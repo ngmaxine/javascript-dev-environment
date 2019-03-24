@@ -83,3 +83,18 @@
 ### Scripts
 * `npm run <scriptName>`
 * Run tasks in parallel: `npm-run-all --parallel <scriptName1> <scriptName2>`
+
+
+## Transpiling
+* Babel (modern standards-based JS, leverage full JS ecosystem, use experimental features earlier, no type defs, annotations required)
+* TypeScript (superset of JavaScript, enhanced autocompletion/readability, safer refactoring, clearer intent, nonstandard features such as interfaces)
+* Elm (compiles down to JS, clean syntax, immutable data structures, friendly errors, all errors are compile-time errors, interops with JS)
+
+### Babel Configuration Styles
+* .babelrc (not npm specific, easier to read since isolated
+* package.json (one less file in your project)
+    * `"babel": { // babel config }`
+
+### Build Script JS Style
+* ES6 (no waiting for transpile, no transpiler dependency)
+* Transpiled (use latest features, consistent coding style, use same linting rules everywhere)
