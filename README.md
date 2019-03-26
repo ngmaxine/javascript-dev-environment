@@ -98,3 +98,33 @@
 ### Build Script JS Style
 * ES6 (no waiting for transpile, no transpiler dependency)
 * Transpiled (use latest features, consistent coding style, use same linting rules everywhere)
+
+
+## Bundling
+### Module Formats
+* IIFE (Immediately Invoked Function Expressions)
+* Asynchronous Module Definition (AMD) - RequireJS
+* CommonJS (CJS) - Node.js
+* Universal Module Definition (UMD)
+* ES6 Modules
+    * Standardized - won't have to transpile when platforms have full support for ES6
+    * Statically analyzable
+        * Improved autocomplete
+        * Intelligent refactoring
+        * Fails fast
+        * Tree shaking - dead code elimination
+    * Easy to read
+        * Named imports
+        * Default exports
+
+### Bundlers
+* Require.js (first popular bundler, utilizes and helped popularize AMD pattern)
+* Browserify (first bundler to reach mass adoption, bundle npm packages for web, large plugin ecosystem)
+* Webpack (bundles more than just JS, import CSS/images/etc. like JS, bundle splitting, built in hot-reloading web server, Webpack 2 offers tree shaking)
+* Rollup (tree shaking, faster loading production code, quite new, great for library authors, no hot reloading and code splitting)
+* JSPM (uses SystemJS - a universal module loader, can load modules at runtime, has own package manager, can install from npm/git, uses Rollup)
+
+### Sourcemaps
+* Maps code back to original source
+* Part of our build
+* Downloaded if you open developer tools
