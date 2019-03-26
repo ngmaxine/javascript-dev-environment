@@ -128,3 +128,31 @@
 * Maps code back to original source
 * Part of our build
 * Downloaded if you open developer tools
+
+
+## Linting
+* Enforce consistency (curly brace position, confirm/alert, trailing commas, globals, eval)
+* Avoid mistakes (extra parenthesis, overwriting function, assignment in conditional, missing default case in switch, debugger / console.log)
+
+### Linters
+* JSLint
+* JSHint
+* ESLint
+
+### Core Decisions
+* Config format?
+    * Dedicated config file (not tied to npm)
+    * package.json (one less file)
+* Which built-in rules?
+* Warnings or Errors?
+    * Warning (can continue development, can be ignored, team must agree: fix warnings, good for minor stylistic issues)
+    * Error (breaks the build, cannot be ignored, team forced to comply, useful for items likely to produce bugs)
+* Which plugins?
+    * Add checks for specific languages (ie. React/Angular/Node.js)
+* Use a preset?
+    * From scratch, recommended, preset (Airbnb, Standard JS)
+
+### Watching with ESLint
+* eslint-loader (re-lints all files upon save)
+* eslint-watch (ESLint wrapper that adds file watch, not tied to webpack, better warning/error formatting, displays clean message, easily lint  tests and build scripts)
+* eslint rules values (0 = Off, 1 = Warning, 2 = Error)
