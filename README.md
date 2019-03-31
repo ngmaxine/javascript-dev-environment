@@ -168,6 +168,7 @@
     * AVA (runs tests in parallel, reruns impacted tests)
     * Jest (popular amongst React developers)
 * Assertion Library
+    * Chai, Expect
     * Assertion = Declare what you expect
     * Most libraries just differ by syntax
 * Helper Libraries
@@ -184,5 +185,23 @@
     * Unit tests should run when hit save - rapid feedback, facilitates TDD, automatic = low friction, increase test visibility
 
 ### Unit Tests vs Integration Tests
-    * Unit tests - test a small unit, often single function, fast, run upon save
-    * Integration tests - test multiple units, involves clicking and waiting, slow, run on demand or in QA
+* Unit tests - test a small unit, often single function, fast, run upon save
+* Integration tests - test multiple units, involves clicking and waiting, slow, run on demand or in QA
+
+### Continuous Integration
+* Confirm commit works as expected on another machine
+* Why CI?
+    * Forgot to commit new file
+    * Forgot to update package.json
+    * Commit doesn't run cross-platform
+    * Node version conflicts
+    * Bad merge
+    * Didn't run tests
+    * Catch mistakes quickly
+* Runs automated build, runs tests, checks code coverage, automate deployment
+* Travis CI (popular, linux-based, hosted solution)
+* Appveyor (Windows-based)
+* Jenkins (popular, highly-configurable)
+* CircleCI
+* Semaphore
+* SnapCI
