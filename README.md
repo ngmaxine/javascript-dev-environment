@@ -156,3 +156,33 @@
 * eslint-loader (re-lints all files upon save)
 * eslint-watch (ESLint wrapper that adds file watch, not tied to webpack, better warning/error formatting, displays clean message, easily lint  tests and build scripts)
 * eslint rules values (0 = Off, 1 = Warning, 2 = Error)
+
+
+## Testing and Continuous Integration
+### Unit Testing Decisions
+* Framework
+    * Mocha (most popular, highly configurable, large ecosystem of support)
+    * Jasmine (similar to Mocha, includes built-in assertion library)
+    * Tape (lean/simple)
+    * QUnit (oldest)
+    * AVA (runs tests in parallel, reruns impacted tests)
+    * Jest (popular amongst React developers)
+* Assertion Library
+    * Assertion = Declare what you expect
+    * Most libraries just differ by syntax
+* Helper Libraries
+    * JSDOM - simulate browser's DOM, run DOM-related tests without a browser
+    * Cheerio - jQuery for the server, query virtual DOM using jQuery selectors
+* Where to run tests
+    * Browser - Karma, Testem (requires more configuration, slower)
+    * Headless Browser (browser doesn't have visible UI) - PhantomJS
+    * In-memory DOM - JSDOM (lighter-weight alternative to PhantomJS)
+* Where to place tests
+    * Centralized - less 'noise' in src folder, deployment confusion, inertia
+    * Alongside - easy imports, clear visibility, convenient to open, no recreating folder structure, easy to move files
+* When to run tests
+    * Unit tests should run when hit save - rapid feedback, facilitates TDD, automatic = low friction, increase test visibility
+
+### Unit Tests vs Integration Tests
+    * Unit tests - test a small unit, often single function, fast, run upon save
+    * Integration tests - test multiple units, involves clicking and waiting, slow, run on demand or in QA
